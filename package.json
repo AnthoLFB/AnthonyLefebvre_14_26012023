@@ -1,12 +1,12 @@
 {
   "name": "react-app-base",
   "version": "1.0.0",
-  "description": "",
+  "description": "Creation of a react application with manual configuration. No use of Create-React-App or similar tools.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "Anthony LEFEBVRE",
   "license": "ISC"
 }
