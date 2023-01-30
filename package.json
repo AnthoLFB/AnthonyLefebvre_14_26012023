@@ -1,7 +1,7 @@
 {
-  "name": "react-app-base",
+  "name": "wealth-health-hrnet-app",
   "version": "1.0.0",
-  "description": "Creation of a react application with manual configuration. No use of Create-React-App or similar tools.",
+  "description": "Internal React application for the financial company WealthHealth to manage employee records.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -13,7 +13,8 @@
   "license": "ISC",
   "dependencies": {
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.7.0"
   },
   "devDependencies": {
     "@babel/core": "^7.20.12",
