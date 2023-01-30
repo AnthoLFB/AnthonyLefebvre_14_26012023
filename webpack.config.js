@@ -10,7 +10,12 @@ module.exports = {
     //Production build location (can be /dist)
     output: {
         path: path.join(__dirname, '/build'),
-        filename: 'bundle.js'
+        filename: 'bundle.js',
+        publicPath: '/'
+    },
+
+    devServer: {
+        historyApiFallback: true
     },
 
     plugins: [
