@@ -1,0 +1,89 @@
+.header, .header__container, .header__container__navbar__list
+{
+    display: flex;
+}
+
+.header, .header__container__navbar__list
+{
+    flex-direction: row;
+}
+
+.header
+{
+    width: 100%;
+    height: 150px;
+    margin-bottom: 3em;
+}
+
+.header__container
+{
+    margin: 0.5em;
+    align-items: center;
+}
+
+
+/* Left side */
+
+.header__container__app-identity
+{
+    flex: 1;
+}
+
+.header__container__logo
+{
+    height: calc(150px - 1em);
+}
+
+.header__container__title
+{
+    position: relative;
+    font-family: "RobotoMedium";
+    font-size: 50px;
+}
+
+.header__container__title::before
+{
+    content: "";
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(to left, #93AD18, #596D07)
+}
+
+/* Right side */
+
+.header__container__navigation
+{
+    flex: 2;
+}
+
+.header__container__navbar
+{
+    width: 100%;
+}
+
+.header__container__navbar__list
+{
+    justify-content: flex-end;
+    gap: 1em;
+}
+
+.header__container__navbar__list__items
+{
+    flex: 1;
+    max-width: 300px;
+    text-align: center;
+}
+
+.header__container__navbar__list__items__links
+{
+    color: #333;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.active, .header__container__navbar__list__items__links:hover
+{
+    text-decoration: underline #596D07;
+}

@@ -4,16 +4,19 @@ import React from 'react';
 //React-Router
 import { Outlet, Link } from 'react-router-dom';
 
+//Components
+import Header from '../../components/Header';
+
+//Css
+import '../../styles/pages/Home.css';
+
 function Home()
 {
     return (
         <React.Fragment>
-            <header>
-                <p><Link to={`/`}>Create Employee</Link></p>
-                <p><Link to={`/List`}>Employee List</Link></p>
-            </header>
+            <Header />
 
-            <main>
+            <main className='main'>
                 <Outlet />
             </main>
 
