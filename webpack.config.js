@@ -26,10 +26,10 @@ module.exports = {
     ],
 
     module: {
-        // Allows babel transpilation to be used on js, jsx, tsx or ts files except those contained in node_modules
         rules: [
+            // Allows babel transpilation to be used on js, jsx files except those contained in node_modules
             {
-                test: /\.(tsx|jsx|ts|js)?$/,
+                test: /\.(jsx|js)?$/,
                 exclude: /node_modules/,
                 use: {
                     loader: 'babel-loader',
@@ -41,12 +41,25 @@ module.exports = {
                     }
 
                 }
-            }
+            },
+
+            // Allows compilation of CSS files  
+            {
+                test: /\.css$/,
+                exclude: /node_modules/,
+                use: ["style-loader", "css-loader"]
+            },
+
+            //Allows images import
+            {
+                test: /\.(png|svg|jpg|jpeg|gif)$/i,
+                type: 'asset/resource',
+            },
         ]
     },
 
     // Avoid specifying extensions when importing modules (only specified extensions here)
     resolve: {
-        extensions: ['.js', '.jsx', '.ts', '.tsx', '.jpeg', '.png', '.gif']
+        extensions: ['.js', '.jsx', '.jpeg', '.jpg', '.png', '.gif']
     },
 }
