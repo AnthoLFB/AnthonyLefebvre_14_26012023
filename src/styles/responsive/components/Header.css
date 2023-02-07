@@ -1,0 +1,54 @@
+/*
+    Sizes :
+    small: 576px,
+    medium: 768px,
+    large: 992px,
+    xlarge: 1200px,
+    xxlarge: 1400px,
+    ultrawide: 2560px
+*/
+
+/* ---- Responsive ---- */
+@media (max-width: 768px) 
+{
+    .header
+    {
+        height: 100px;
+    }
+
+    .header__container__logo
+    {
+        height: calc(100px - 1em);
+    }
+
+    .header__container__title
+    {
+        font-size: 35px;
+    }
+
+    .header__container__navbar__list
+    {
+        justify-content: space-around;
+        gap: inherit;
+    }
+
+    .header__container__navbar__list__items__links
+    {
+        font-size: 20px;
+    }
+}
+
+
+@media (max-width: 576px) 
+{
+    .header
+    {
+        height: auto;
+        flex-direction: column;
+    }
+
+    .header__container
+    {
+        justify-content: center;
+    }
+}
