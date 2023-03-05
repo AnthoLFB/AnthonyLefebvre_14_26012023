@@ -1,11 +1,12 @@
 //react
-import React from 'react';
+import React, {useState} from 'react';
 
-//Modal
+//Redux
+import { useStore } from 'react-redux';
+import { createNewEmployee } from '../features/employee';
+
+//Modal lib
 import {Modal} from 'anthony_lfb_modal_p14';
-
-//React
-import { useState } from 'react';
 
 //Components
 import CustomTextInput from "./CustomTextInput";
@@ -25,13 +26,21 @@ import { NotBlank, CheckingDate, IsNumericValue } from "../scripts/Constraint";
 
 function CreateEmployeeForm()
 {
-    const [isOpen, setIsOpen] = useState(false);
-    const [employeeIdentity, setEmployeeIdentity] = useState(null);
+    //Redux store
+    const store = useStore();
+
+    //Local states to manage the modal (open, model, data)
+    const [modalStatus, setmodalStatus] = useState(false);
+    const [modalType, setModalType] = useState(null);
+    const [modalTitle, setModalTitle] = useState(null);
+    const [modalMessage, setModalMessage] = useState(null);
+
+    const modalControls = {"status": setmodalStatus, "type": setModalType, "title": setModalTitle, "message": setModalMessage};
 
     return (
         <React.Fragment>
             <section className="create-employee">
-                <form className='create-employee__form' id="createEmployeeForm" onSubmit={(e) => checkData(e, setIsOpen, setEmployeeIdentity)}>
+                <form className='create-employee__form' id="createEmployeeForm" onSubmit={(e) => checkData(e, store, modalControls)}>
 
                     <h2 className="create-employee__form__title">Employee's Information</h2>
 
@@ -60,15 +69,12 @@ function CreateEmployeeForm()
                 </form>
             </section>
 
-            <Modal isOpen={isOpen} setIsOpen={setIsOpen} isScrollable={true} type={"success"} iconToDisplay={null} title={"test"} message={employeeIdentity + " a été enregistré avec succès dans la liste des employés."}/>
-
-            
-
+            <Modal isOpen={modalStatus} setIsOpen={setmodalStatus} isScrollable={true} type={modalType} iconToDisplay={null} title={modalTitle} message={modalMessage}/>
         </React.Fragment>
     );
 }
 
-function checkData(e, displayModal, setEmployeeIdentity)
+function checkData(e, store, modalControls)
 {
     e.preventDefault()
 
@@ -116,21 +122,36 @@ function checkData(e, displayModal, setEmployeeIdentity)
         new NotBlank(department, notBlankMessage)
     ]
 
+    //Reset errors
     let errorCount = 0;
     removeErrors(form);
 
+    //Try to valid every constraint
     constraints.forEach(constraint => {
         errorCount += constraint.isValid() ? 0 : 1
     });
 
+    //If all contracts are not validated, the form is not processed
     if(errorCount > 0)
     {
         return false
     }
 
-    console.log("Ouverture de la modale de confirmation.");
-    setEmployeeIdentity(firstname.value + " " + lastname.value);
-    displayModal(true);
+    //Create a new object employee
+    const newEmployee = {
+        "firstName": firstname.value,
+        "lastName": lastname.value,
+        "birthDate": birthdate.value,
+        "street": street.value,
+        "city": city.value,
+        "state": state.value,
+        "zipCode": zipCode.value,
+        "startDate": startDate.value,
+        "department": department.value
+    }
+
+    //Redux -> update employee list and then display the modal
+    createNewEmployee(store, newEmployee, modalControls);
 }
 
 function removeErrors(containerToCheck)
