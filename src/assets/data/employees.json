@@ -1,0 +1,24 @@
+[
+    {
+        "firstName": "John",
+        "lastName": "Doe",
+        "birthDate": "1987-12-02",
+        "street": "969 East Harrison Street",
+        "city": "Mc Kinney",
+        "state": "TX",
+        "zipCode": "75070",
+        "startDate": "2012-02-24",
+        "department": "Engineering"
+    },
+    {
+        "firstName": "Jane",
+        "lastName": "Doe",
+        "birthDate": "1992-04-15",
+        "street": "8209 Belmont Road",
+        "city": "Brooklyn",
+        "state": "NY",
+        "zipCode": "11235",
+        "startDate": "2015-07-08",
+        "department": "Legal"
+    }
+]
