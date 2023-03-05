@@ -22,7 +22,7 @@ module.exports = {
         // Provide html file (for the build)
         new HTMLWebpackPlugin({
             template: ('./public/index.html')
-        })
+        }),
     ],
 
     module: {
@@ -46,7 +46,6 @@ module.exports = {
             // Allows compilation of CSS files  
             {
                 test: /\.css$/,
-                exclude: /node_modules/,
                 use: ["style-loader", "css-loader"]
             },
 
