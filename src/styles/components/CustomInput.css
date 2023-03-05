@@ -1,0 +1,59 @@
+.field-container
+{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-right: 20px;
+    width: calc(100% - 40px);
+    max-width: 500px;
+}
+
+.field-container:not(:last-child)
+{
+   margin-bottom: 25px;
+}
+
+
+.field-container__input
+{
+    margin: 0;
+    padding: 0 0 0 15px;
+    border: 0;
+    border-radius: 4px;
+    width: 100%;
+    height: 40px;
+    background-color: #ecf0f3;
+    box-shadow: inset 2px 2px 4px #aeb5c0, inset -2px -2px 4px #d1d9e6;
+    font-family: "RobotoRegular", sans-serif;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+}
+
+.field-container__input:not(select)
+{
+    width: calc(100% - 15px);
+}
+
+.field-container__label
+{
+    margin-bottom: 5px;
+    font-size: 16px;
+    font-family: "RobotoMedium", sans-serif;
+}
+
+.field-container__input:focus
+{
+    box-shadow: inset 2px 2px 4px #8d939c, inset -2px -2px 4px #8d939c;
+}
+
+.inputErrorMessage
+{
+    width: 100%;
+    margin-top: 5px;
+}
+
+.inputErrorMessage p
+{
+    color: #420101;
+    font-size: 16px;
+}
