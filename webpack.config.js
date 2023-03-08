@@ -27,10 +27,9 @@ module.exports = {
 
     module: {
         rules: [
-            // Allows babel transpilation to be used on js, jsx files except those contained in node_modules
+            // Allows babel transpilation to be used on js, jsx files
             {
                 test: /\.(jsx|js)?$/,
-                exclude: /node_modules/,
                 use: {
                     loader: 'babel-loader',
                     options: {
