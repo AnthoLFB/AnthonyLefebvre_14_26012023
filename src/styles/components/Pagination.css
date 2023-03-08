@@ -1,0 +1,102 @@
+.pagination
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pagination__controls
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.btn-group
+{
+    display: flex;
+    flex-direction: row;
+}
+
+.pagination__controls__btn
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 30px;
+    height: 30px;
+
+    font-family: "RobotoMedium", sans-serif;
+    font-size: 18px;
+
+    border: 0;
+
+    background-color: #93AD18;
+    color: #FFFFFF;
+}
+button:hover
+{
+    background-color: #596D07;
+}
+
+.pagination__controls__items-number
+{
+    width: 120px;
+    height: 30px;
+
+    margin: 0;
+    margin-right: 25px;
+    padding: 0 0 0 15px;
+
+    border: 0;
+    border-radius: 4px;
+    
+    background-color: #ecf0f3;
+    box-shadow: inset 2px 2px 4px #aeb5c0, inset -2px -2px 4px #d1d9e6;
+
+    font-family: "RobotoMedium", sans-serif;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+}
+
+.pagination__page-information__container
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.pagination__page-information__container__input
+{
+    width: 30px;
+    height: 30px;
+    margin: 0;
+    border: 0;
+    border-radius: 4px;
+    background-color: #ecf0f3;
+    box-shadow: inset 2px 2px 4px #aeb5c0, inset -2px -2px 4px #d1d9e6;
+    font-family: "RobotoMedium", sans-serif;
+    text-align: center;
+    letter-spacing: 0.5px;
+    font-size: 16px;
+}
+
+.pagination__page-information__container__input::-webkit-outer-spin-button, .pagination__page-information__container__input::-webkit-inner-spin-button 
+{
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.pagination__page-information__container__input 
+{
+    -moz-appearance: textfield;
+}
+
+.pagination__page-information__container__label, .pagination__page-information__container__pageCount, .pagination__information__itemsCount
+{
+    font-family: "RobotoMedium", sans-serif;
+    font-size: 16px;
+}

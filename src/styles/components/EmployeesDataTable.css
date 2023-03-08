@@ -1,0 +1,50 @@
+.employee-list
+{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    margin: 0 2em;
+    width: calc(100% - 4em);
+}
+
+.employee-list__container__table
+{
+    width: 100%;
+}
+
+.employee-list__container__table
+{
+    border: 1px solid #363636;
+}
+
+.employee-list__container__table td, .employee-list__table th 
+{
+    font-size: 16px;
+    border-bottom: 1px solid #363636;
+    padding: 8px;
+}
+
+.employee-list__container__table th 
+{
+    background-color: #93AD18;
+
+    font-family: "RobotoMedium", sans-serif;
+    font-size: 18px;
+    color: white;
+
+    padding: 12px 8px;
+    text-align: left; 
+}
+
+.employee-list__container__table tr:nth-child(even)
+{
+    background-color: #d8dde2;
+}
+
+.employee-list__container__table tr:hover 
+{
+    background-color: #cccccc;
+}
+
+
