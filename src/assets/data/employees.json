@@ -20,5 +20,105 @@
         "zipCode": "11235",
         "startDate": "2015-07-08",
         "department": "Legal"
+    },
+    {
+        "firstName": "Teresa",
+        "lastName": "Champlin",
+        "birthDate": "1972-12-28",
+        "street": "247 Broad St",
+        "city": "Milford",
+        "state": "CT",
+        "zipCode": "06460",
+        "startDate": "1999-02-26",
+        "department": "Human Resources"
+    },
+    {
+        "firstName": "Luther",
+        "lastName": "Armstrong",
+        "birthDate": "1991-02-15",
+        "street": "879 Killens Pond Rd",
+        "city": "Harrington",
+        "state": "DE",
+        "zipCode": "19952",
+        "startDate": "2007-09-11",
+        "department": "Legal"
+    },
+    {
+        "firstName": "Toni",
+        "lastName": "Farrell",
+        "birthDate": "1977-07-16",
+        "street": "321 E 6990th S",
+        "city": "Midvale",
+        "state": "UT",
+        "zipCode": "84047",
+        "startDate": "1997-12-6",
+        "department": "Marketing"
+    },
+    {
+        "firstName": "Anna",
+        "lastName": "Goldner",
+        "birthDate": "1959-05-20",
+        "street": "2015 Ridgewood Rd",
+        "city": "Medina",
+        "state": "OH",
+        "zipCode": "44256",
+        "startDate": "1995-04-13",
+        "department": "Engineering"
+    },
+    {
+        "firstName": "Cody",
+        "lastName": "Stark",
+        "birthDate": "1971-10-01",
+        "street": "1035 Upper Tom Burke Dr",
+        "city": "Gallatin Gateway",
+        "state": "MT",
+        "zipCode": "59730",
+        "startDate": "2000-05-24",
+        "department": "Sales"
+    }, 
+    {
+        "firstName": "Bonnie",
+        "lastName": "Mills",
+        "birthDate": "1981-09-06",
+        "street": "Po Box 259",
+        "city": "Derby",
+        "state": "VT",
+        "zipCode": "05829",
+        "startDate": "2000-08-01",
+        "department": "Human Resources"
+    },
+    {
+        "firstName": "Tyrell",
+        "lastName": "Lynch",
+        "birthDate": "1981-10-11",
+        "street": "432 Joy Dr",
+        "city": "Scottsboro",
+        "state": "AL",
+        "zipCode": "35768",
+        "startDate": "2005-04-13",
+        "department": "Legal"
+    },
+    {
+        "firstName": "Florine",
+        "lastName": "Ebert",
+        "birthDate": "1960-09-02",
+        "street": "3203 Kylemoor Dr",
+        "city": "Conyers",
+        "state": "GA",
+        "zipCode": "30012",
+        "startDate": "1980-03-12",
+        "department": "Sales"
+    },
+    {
+        "firstName": "Constantin",
+        "lastName": "Mayer",
+        "birthDate": "1992-12-08",
+        "street": "110 R St NE",
+        "city": "Washington",
+        "state": "DC",
+        "zipCode": "20002",
+        "startDate": "2015-10-18",
+        "department": "Engineering"
     }
+
 ]
