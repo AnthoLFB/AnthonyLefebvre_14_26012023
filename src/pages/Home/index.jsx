@@ -6,6 +6,7 @@ import { Outlet, Link } from 'react-router-dom';
 
 //Components
 import Header from '../../components/Header';
+import Footer from '../../components/Footer';
 
 //Css
 import '../../styles/pages/Home.css';
@@ -20,9 +21,7 @@ function Home()
                 <Outlet />
             </main>
 
-            <footer>
-                <p>Footer</p>
-            </footer>
+            <Footer />
         </React.Fragment>
     );
 }
