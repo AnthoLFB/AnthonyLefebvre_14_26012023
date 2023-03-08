@@ -150,8 +150,22 @@ function checkData(e, store, modalControls)
         "department": department.value
     }
 
-    //Redux -> update employee list and then display the modal
-    createNewEmployee(store, newEmployee, modalControls);
+    try 
+    {
+        //Redux -> update employee list and then display the modal
+        createNewEmployee(store, newEmployee);
+        modalControls.title("Employee created !")
+        modalControls.message( newEmployee.firstName + ' ' + newEmployee.lastName + " has been successfully added to the list of employees.")
+        modalControls.type("success")
+        modalControls.status(true)
+    } 
+    catch (error) 
+    {
+        modalControls.title("Error !")
+        modalControls.message(error)
+        modalControls.type("error")
+        modalControls.status(true)
+    }
 }
 
 function removeErrors(containerToCheck)
