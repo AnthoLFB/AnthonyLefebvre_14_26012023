@@ -18,6 +18,10 @@ module.exports = {
         historyApiFallback: true
     },
 
+    performance: {
+        hints: false,
+    },
+
     plugins: [
         // Provide html file (for the build)
         new HTMLWebpackPlugin({
