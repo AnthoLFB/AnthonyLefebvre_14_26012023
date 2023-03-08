@@ -1,0 +1,66 @@
+/*
+    Sizes :
+    small: 576px,
+    medium: 768px,
+    large: 992px,
+    xlarge: 1200px,
+    xxlarge: 1400px,
+    ultrawide: 2560px
+*/
+
+/* ---- Responsive ---- */
+@media (max-width: 768px) 
+{
+
+    .pagination__controls__btn 
+    {
+        width: 20px;
+        height: 20px;
+        font-size: 16px;
+    }
+
+    .pagination__controls__items-number 
+    {
+        width: 80px;
+        height: 20px;
+        font-size: 10px;
+    }
+
+    .pagination__page-information__container__label, .pagination__page-information__container__pageCount, .pagination__information__itemsCount 
+    {
+        font-size: 12px;
+    }
+
+    .pagination__page-information__container__input 
+    {
+        width: 20px;
+        height: 20px;
+        font-size: 10px;
+    }
+
+}
+
+@media (max-width: 576px) 
+{
+    .pagination__page-information__container
+    {
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .pagination__controls__items-number
+    {
+        margin: 0;
+    }
+
+    .pagination__controls
+    {
+        flex-direction: column-reverse;
+        gap: 15px;
+    }
+
+    .pagination__page-information__container__label
+    {
+        display: none;
+    }
+}

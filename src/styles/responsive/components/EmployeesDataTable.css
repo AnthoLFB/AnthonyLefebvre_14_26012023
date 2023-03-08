@@ -1,0 +1,38 @@
+/*
+    Sizes :
+    small: 576px,
+    medium: 768px,
+    large: 992px,
+    xlarge: 1200px,
+    xxlarge: 1400px,
+    ultrawide: 2560px
+*/
+
+/* ---- Responsive ---- */
+@media (max-width: 768px) 
+{
+
+    .employee-list__container
+    {
+        overflow-x: auto;
+    }
+    
+    .employee-list__container__table td, .employee-list__container__table th 
+    {
+        min-width: 140px;
+        text-align: center;
+        border: 1px solid #363636;
+    }
+
+}
+
+@media (max-width: 576px) 
+{
+
+    .employee-list
+    {
+        margin: 0 1em;
+        width: calc(100% - 2em);
+    }
+
+}

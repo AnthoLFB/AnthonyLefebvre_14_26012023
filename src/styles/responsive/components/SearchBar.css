@@ -1,0 +1,26 @@
+/*
+    Sizes :
+    small: 576px,
+    medium: 768px,
+    large: 992px,
+    xlarge: 1200px,
+    xxlarge: 1400px,
+    ultrawide: 2560px
+*/
+
+/* ---- Responsive ---- */
+@media (max-width: 768px) 
+{
+    .research
+    {
+        margin: 0;
+        width: calc(100% - 15px);
+        align-items: flex-start;
+    }
+
+    .research__label
+    {
+        display: flex;
+    }
+}
+
