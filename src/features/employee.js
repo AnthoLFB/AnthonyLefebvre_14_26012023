@@ -15,6 +15,8 @@ export function createNewEmployee(store, newEmployee)
     try 
     {
         store.dispatch({type: ADD_EMPLOYEE_TO_LIST, payload: newEmployee});
+        const employees = store.getState().employee.employeeList;
+        localStorage.setItem('employeesList', JSON.stringify(employees));
     } 
     catch (error) 
     {
