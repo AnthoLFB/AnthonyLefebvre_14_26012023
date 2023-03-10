@@ -1,0 +1,39 @@
+.error
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+
+    min-height: 100vh;
+    background-color: #ECF0F3;
+}
+
+.error__title
+{
+    position: relative;
+    font-family: "RobotoMedium";
+    font-size: 50px;
+}
+
+.error__title::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(to left, #93AD18, #596D07);
+}
+
+.error__catchphrase
+{
+    font-family: "RobotoMedium";
+    font-size: 24px;
+}
+
+.error__information
+{
+    font-size: 20px;
+    font-family: "RobotoMedium";
+}
