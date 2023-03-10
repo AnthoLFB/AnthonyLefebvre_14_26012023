@@ -11,7 +11,12 @@ import "../../styles/responsive/components/EmployeesDataTable.css";
 
 function EmployeesDataTable({employees})
 {
-    const data = useMemo(() => employees, []);
+
+    // Uses locally stored data if needed. If they are not available, we use the initialState of redux
+    const stockedEmployees = JSON.parse(localStorage.getItem("employeesList"));
+    const employeeList = stockedEmployees != null ? stockedEmployees : employees
+
+    const data = useMemo(() => employeeList, []);
     const columns = useMemo(() => [
         {
             Header: "First Name",
