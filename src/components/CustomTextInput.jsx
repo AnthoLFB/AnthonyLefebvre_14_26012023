@@ -1,7 +1,7 @@
 //CSS
 import '../styles/components/CustomInput.css';
 
-function CustomTextInput({title, type, labelId, isRequired, constraints, setErrorCount})
+function CustomTextInput({title, type, labelId, isRequired})
 {
 
 
